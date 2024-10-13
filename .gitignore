@@ -1,0 +1,30 @@
+# .gitignore
+
+# 環境変数ファイル
+.env
+
+# Dockerボリュームのデータ
+data/
+
+# ワークスペースのデータ
+workspace/
+
+# ログファイル
+*.log
+
+# OSが生成するファイル
+.DS_Store
+Thumbs.db
+
+# エディタが生成する一時ファイル
+*.swp
+*.swo
+*~
+
+# Node.jsの依存関係（必要に応じて）
+node_modules/
+
+# Pythonの仮想環境（必要に応じて）
+venv/
+*.pyc
+__pycache__/

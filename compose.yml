@@ -1,0 +1,21 @@
+services:
+    linux_env:
+        build:
+            context: .
+            args:
+                - USERNAME=${USERNAME}
+                - USER_PASSWORD=${USER_PASSWORD}
+                - SUDO_WITHOUT_PASSWORD=${SUDO_WITHOUT_PASSWORD}
+        container_name: ${CONTAINER_NAME}
+        restart: unless-stopped
+        ports:
+            - "${SSH_PORT}:22"
+        volumes:
+            - data_volume:/home/${USERNAME}/data
+            - ${WORKSPACE_VOLUME}:/home/${USERNAME}/workspace
+        environment:
+            - TZ=${TIMEZONE}
+
+volumes:
+    data_volume:
+        name: ${DATA_VOLUME_NAME}

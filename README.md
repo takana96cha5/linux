@@ -32,7 +32,7 @@
 
 4. コンテナをビルドして起動します：
     ```
-    docker-compose up -d
+    docker compose up -d
     ```
 
 ## 使用方法
@@ -101,20 +101,20 @@ cd ./workspace/project
 1. コンテナのログを確認：
 
     ```
-    docker-compose logs
+    docker compose logs
     ```
 
 2. コンテナを再起動：
 
     ```
-    docker-compose restart
+    docker compose restart
     ```
 
 3. 環境を完全に再構築（注意：データボリュームは保持されます）：
 
     ```
-    docker-compose down
-    docker-compose up -d --build
+    docker compose down
+    docker compose up -d --build
     ```
 
 4. データボリュームの内容を確認：
